@@ -633,6 +633,7 @@ static inline uint64_t MUL(uint32_t a, uint32_t b) {
   return (uint64_t)a * (uint64_t)b;
 }
 
+#if 0  // Currently unused - kept for potential future use
 // From BearSSL. Performs a 32-bit->64-bit carryless/polynomial
 // long multiply.
 //
@@ -715,6 +716,7 @@ static std::pair<uint64_t, uint64_t> clmul_64(uint64_t x, uint64_t y) {
 
   return std::make_pair(xy0, xy1);
 }
+#endif  // Currently unused
 
 /* MMX */
 result_t test_mm_empty(const SSE2RVV_TEST_IMPL &impl, uint32_t iter) {
